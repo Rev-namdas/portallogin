@@ -20,8 +20,7 @@
 
 .login-container{
 	background-color: white;
-	height: calc(100vh - 20%);
-	width: calc(100vw - 10%);
+	margin: 4rem;
 	border-radius: var(--container-radius);
 	padding: 2rem;
 }
@@ -57,7 +56,6 @@
 
 .title{
 	font-family: var(--font-family);
-	font-size: 2rem;
 	color: var(--txt-color);
 }
 
@@ -117,11 +115,12 @@
 }
 
 .form-icon{
-	height: 50%;
+	max-height: 30%;
 }
 
 .login-btn{
 	border: none;
+	border-radius: 0.3rem;
 	font-family: var(--font-family);
 	font-weight: bold;
 	font-size: 1.2rem;
@@ -131,13 +130,27 @@
 }
 
 .login-btn:hover{
-	background-color: var(--bg-color);
+	background-color: var(--txt-color);
 	color: white;
 }
 
-.btn-wrapper{
+/* .btn-wrapper{
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center;
-	align-items: center; */
+} */
+
+@media (max-width: 500px) {
+	.login-container{
+		margin: 1rem;
+		height: 95%;
+		padding: 1rem;
+	}
+
+	.img-wrapper{
+		margin: 0;
+	}
+
+	.design-wrapper{
+		height: max-content;
+	}
 }
