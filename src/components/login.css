@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
 
+*{
+	box-sizing: border-box;
+	user-select: none;
+}
+
 :root{
 	--bg-color: #9CC1C9;
 	--txt-color: #27606C;
@@ -20,7 +25,8 @@
 
 .login-container{
 	background-color: white;
-	margin: 4rem;
+	height: 90%;
+	width: 90%;
 	border-radius: var(--container-radius);
 	padding: 2rem;
 }
@@ -42,15 +48,29 @@
 .img-responsive{
 	display: block;
 	width: 100%;
-	max-width: calc(100vh);
+	/* max-width: 100vh; */
 }
 
 .form-wrapper{
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 }
 
-.grow{
+.display-flex{
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-start{
+	align-self: flex-start;
+}
+
+.flex-end{
+	align-self: flex-end;
+}
+
+.flexgrow{
 	flex-grow: 1;
 }
 
@@ -134,12 +154,29 @@
 	color: white;
 }
 
+.forgotpass{
+	color: var(--txt-color);
+	font-family: var(--font-family);
+}
+
+.forgotpass:hover{
+	cursor: pointer;
+}
+
+.min-height-100{
+	min-height: 100vh;
+}
+
+.border-1{
+	border: 1px solid black;
+}
+
 /* .btn-wrapper{
 	display: flex;
 	flex-direction: column;
 } */
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
 	.login-container{
 		margin: 1rem;
 		height: 95%;
@@ -153,4 +190,4 @@
 	.design-wrapper{
 		height: max-content;
 	}
-}
+} */
