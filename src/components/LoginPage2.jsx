@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./login.css"
+import "./login2.css"
 import LoginImage from "../assets/img/login.png"
 import RyansMedia from "../assets/img/ryansmedia-logo.png"
 import EmailIcon from "../assets/img/email.png"
@@ -24,61 +24,59 @@ export default function LoginPage() {
 
 	return (
 		<div className="page-bg">
-			<div className="login-container row">
-				<div className="col-md-7 col-sm-7 design-wrapper">
+			<div className="login-container">
+				<div className="design-wrapper">
 					<div className="img-wrapper">
 						<img className="img-responsive" src={LoginImage} alt="Login" />
 					</div>
 				</div>
-				<div className="col-md-4 col-sm-4 offset-md-1">
-
-					<div className="top">
-						<form>
-							<div>
-								<img className="icon-responsive" src={RyansMedia} alt="Ryans Media" />
-							
-								<div className="row input-container">
-									<div className="col-2 item-center min-height-75"> <img className="img-fluid icon-65 sm-f-w" src={EmailIcon} alt="Icon" /> </div>
-									<div className="col-9 border-left">
-										<span className="form-title"> Email Address </span>
-										<input 
-											className="input-box" 
-											type="email" 
-											autoComplete='off' 
-											name="email" 
-											placeholder="type email..."
-											onChange={handleLogin} 
-										/>
-									</div>
-								</div>
-
-								<div className="row input-container">
-									<div className="col-2 item-center  min-height-75"> <img className="img-fluid icon-85 sm-f-w" src={PasswordIcon} alt="Icon" /> </div>
-									<div className="col-9 border-left">
-										<span className="form-title"> Password </span>
-										<input 
-											className="input-box" 
-											type="password" 
-											autoComplete='off' 
-											name="password" 
-											placeholder="type password..."
-											onChange={handleLogin} 
-										/>
-									</div>
-								</div>
-
-								<div className="row">
-									<div className="col-6">
-										<button className="login-btn">Login</button>
-									</div>
-									<div className="col-6 d-flex align-items-center justify-content-end">
-										<span onClick={() => console.log(credentials)} className="forgotpass">Forgot Password ?</span>
-									</div>
-								</div>
-							</div>
-						</form>
+				<div className="logo-wrapper">
+					<img className="icon-responsive" src={RyansMedia} alt="Ryans Media" />
+				</div>
+				<div className="email-wrapper">
+					<div className="row input-container">
+						<div className="col-2 item-center min-height-75"> <img className="img-fluid icon-65 sm-f-w" src={EmailIcon} alt="Icon" /> </div>
+						<div className="col-9 border-left">
+							<span className="form-title"> Email Address </span>
+							<input 
+								className="input-box" 
+								type="email" 
+								autoComplete='off' 
+								name="email" 
+								placeholder="type email..."
+								onChange={handleLogin} 
+							/>
+						</div>
 					</div>
-					<div className="row bottom">
+
+					<div className="row input-container">
+						<div className="col-2 item-center  min-height-75"> <img className="img-fluid icon-85 sm-f-w" src={PasswordIcon} alt="Icon" /> </div>
+						<div className="col-9 border-left">
+							<span className="form-title"> Password </span>
+							<input 
+								className="input-box" 
+								type="password" 
+								autoComplete='off' 
+								name="password" 
+								placeholder="type password..."
+								onChange={handleLogin} 
+							/>
+						</div>
+					</div>
+
+					<div className="row">
+						<div className="col-6">
+							<button className="login-btn">Login</button>
+						</div>
+						<div className="col-6 d-flex align-items-center justify-content-end">
+							<span onClick={() => console.log(credentials)} className="forgotpass">Forgot Password ?</span>
+						</div>
+					</div>
+
+				</div>
+				<div className="space-wrapper"></div>
+				{/* <div className="footer-wrapper">
+					<div className="row">
 						<div className="col-md-6 col-sm-12 center-element">
 							<div className="row footer-label">www.ryansarchives.com</div>
 							<div className="row center-element"><img className="icon-ryans" src={RyansIcon} alt="Ryans Archives Limited" /></div>
@@ -101,8 +99,7 @@ export default function LoginPage() {
 							</div>
 						</div>
 					</div>
-
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)
