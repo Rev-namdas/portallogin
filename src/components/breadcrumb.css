@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.flexbox{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: max-content;
+	width: 100%;
+}
+
+.breadcrumb{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 1rem;
+}
+
+.breadcrumb-icon{
+	height: 1.2rem;
+	z-index: 1000;
+}
+
+.breadcrumb-span{
+	height: max-content;
+	background-color: #3AAAFF;
+	height: 1.2rem;
+	padding: 0 0.6rem;
+	margin-left: -0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 0 1rem 1rem 0;
+}
+
+.border-1{
+	border: 1px solid black;
+}

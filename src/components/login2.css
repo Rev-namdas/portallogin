@@ -47,6 +47,7 @@
 	justify-content: center;
 	align-items: center;
 	width: max-content;
+	margin-right: 2rem;
 }
 
 .logo-wrapper{
@@ -178,8 +179,7 @@
 
 .footer-icons{
 	display: flex;
-	justify-content: space-evenly;
-	margin-left: 1rem;
+	justify-content: center;
 }
 
 .footer-icon{
@@ -188,6 +188,10 @@
 
 .icon-ryans{
 	max-width: 40%;
+}
+
+.border-1{
+	border: 1px solid black;
 }
 
 @media screen and (max-width: 600px) {
@@ -207,15 +211,6 @@
 
 	.img-wrapper{
 		margin: 0;
-	}
-
-	.design-wrapper{
-		height: max-content;
-	}
-
-	.top{
-		height: max-content;
-		margin-bottom: 1rem;
 	}
 
 	.sm-f-w{
@@ -238,9 +233,10 @@
 		display: none;
 	}
 
-	.img-responsive, .design-wrapper{
-		width: calc(100vw - 20%);
+	
+	.design-wrapper{
+		width: calc(100vw - 22%);
 		display: flex;
-		justify-self: center;
+		justify-content: center;
 	}
 }

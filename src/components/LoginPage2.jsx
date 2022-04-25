@@ -9,14 +9,16 @@ import FBIcon from "../assets/img/facebook.png"
 import IGIcon from "../assets/img/instagram.png"
 import INIcon from "../assets/img/linkedin.png"
 import YTIcon from "../assets/img/youtube.png"
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginPage() {
 	document.title = "Ryans Media - Login"
 
 	const initialState = Object.freeze({ email: "", password: ""})
 	const [credentials, setCredentials] = useState(initialState)
+	const navigate = useNavigate()
 
-	const handleLogin = (e) => {
+	const handleChange = (e) => {
 		e.preventDefault()
 
 		setCredentials({...credentials, [e.target.name] : e.target.value.trim()})
@@ -44,7 +46,7 @@ export default function LoginPage() {
 								autoComplete='off' 
 								name="email" 
 								placeholder="type email..."
-								onChange={handleLogin} 
+								onChange={handleChange} 
 							/>
 						</div>
 					</div>
@@ -59,14 +61,14 @@ export default function LoginPage() {
 								autoComplete='off' 
 								name="password" 
 								placeholder="type password..."
-								onChange={handleLogin} 
+								onChange={handleChange} 
 							/>
 						</div>
 					</div>
 
 					<div className="row">
 						<div className="col-6">
-							<button className="login-btn">Login</button>
+							<button className="login-btn" onClick={() => navigate('/home')}>Login</button>
 						</div>
 						<div className="col-6 d-flex align-items-center justify-content-end">
 							<span onClick={() => console.log(credentials)} className="forgotpass">Forgot Password ?</span>
@@ -75,31 +77,35 @@ export default function LoginPage() {
 
 				</div>
 				<div className="space-wrapper"></div>
-				{/* <div className="footer-wrapper">
+				<div className="footer-wrapper">
 					<div className="row">
 						<div className="col-md-6 col-sm-12 center-element">
 							<div className="row footer-label">www.ryansarchives.com</div>
-							<div className="row center-element"><img className="icon-ryans" src={RyansIcon} alt="Ryans Archives Limited" /></div>
+							<div className="row center-element">
+								<a className="center-element" href="https://www.ryansarchives.com" target="_blank" rel="noreferrer">
+									<img className="icon-ryans" src={RyansIcon} alt="Ryans Archives Limited" />
+								</a>
+							</div>
 						</div>
 						<div className="col-md-6 col-sm-12 center-element">
 							<div className="row footer-label">Visit Our Social Sites:</div>
 							<div className="footer-icons">
-								<a href="https://www.facebook.com/ryansmediapage/" target="_blank" rel="noreferrer">
+								<a className="center-element" href="https://www.facebook.com/ryansmediapage/" target="_blank" rel="noreferrer">
 									<img className="footer-icon" src={FBIcon} alt="Facebook" />
 								</a>
-								<a href="https://www.instagram.com/ryans_media/?hl=en" target="_blank" rel="noreferrer">
+								<a className="center-element" href="https://www.instagram.com/ryans_media/?hl=en" target="_blank" rel="noreferrer">
 									<img className="footer-icon" src={IGIcon} alt="Instagram" />
 								</a>
-								<a href="https://bd.linkedin.com/company/rayansmedia" target="_blank" rel="noreferrer">
+								<a className="center-element" href="https://bd.linkedin.com/company/rayansmedia" target="_blank" rel="noreferrer">
 									<img className="footer-icon" src={INIcon} alt="Linkedin" />
 								</a>
-								<a href="https://www.youtube.com/channel/UCMEVKGs7OhRZb7Gw3LaCVhg" target="_blank" rel="noreferrer">
+								<a className="center-element" href="https://www.youtube.com/channel/UCMEVKGs7OhRZb7Gw3LaCVhg" target="_blank" rel="noreferrer">
 									<img className="footer-icon" src={YTIcon} alt="Youtube" />
 								</a>
 							</div>
 						</div>
 					</div>
-				</div> */}
+				</div>
 			</div>
 		</div>
 	)
